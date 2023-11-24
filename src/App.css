@@ -1,0 +1,20 @@
+/* src/App.css */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #001f3f; /* Set dark blue background color */
+  color: #ffffff; /* Set text color to white */
+  font-size: 60px; /* Set the font size to 24px, you can adjust this value as needed */
+}
+
+
+
+
+
+.forms-container button {
+  font-size: 50px; /* Set the font size for buttons to 24px, adjust as needed */
+  margin-top: 10px; /* Add margin to separate the button from the form */
+}
