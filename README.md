@@ -11,13 +11,6 @@ Our capstone project is dedicated to developing a revolutionary smart health ban
 - **IoT Integration:** Telus LTE-M IoT board for robust data transfer.
 - **Prototype Design:** Utilizing Arduino for sensor testing and troubleshooting.
 
-## Technical Risks
-
-1. **Ergonomic Design:** Placement of sensors on the wristband.
-2. **Real-time Data Transfer:** Ensuring seamless data transfer and visualization.
-3. **Data Security:** Implementing robust measures for user data protection.
-4. **Integration Challenges:** Ensuring compatibility of various components.
-5. **Budget Management:** Monitoring expenses to maintain project feasibility.
 
 ## Repository Contents
 
