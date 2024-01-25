@@ -4,7 +4,7 @@
   font-size: 6rem; /* Increase font size */
   color: #f1f1f1;
   font-size: 10rem;
-  font-family: 'Fascinate', cursive;
+  font-family: 'Fascinate';
   text-transform: uppercase;
 }
 
@@ -213,18 +213,10 @@ input[type='password']:focus {
 .home-page-title {
   color: #fff;
 }
-/* App.css */
-.welcome-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 15vh;
-  background-color: #87a0eb; /* Light blue background color */
-}
+
 
 .welcome-title {
   font-size: 6rem; /* Increase font size */
-  color: #ffffff; /* White color for text */
+  color: rgb(252, 252, 252); /* White color for text */
   text-align: center; /* Center-align text */
 }

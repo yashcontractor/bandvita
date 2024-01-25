@@ -1,4 +1,3 @@
-// LoginPage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
@@ -12,8 +11,16 @@ const LoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Check credentials
-    if (username === 'Admin' && password === 'admin123') {
+    // Check if entered credentials match any user (excluding admin)
+    const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+    const user = storedUsers.find(
+      (u) => u.username === username && u.password === password && u.username !== 'Admin'
+    );
+
+    // Check if entered credentials match admin credentials
+    const isAdmin = username === 'Admin' && password === 'admin123';
+
+    if (user || isAdmin) {
       navigate('/welcome');
     } else {
       setError('Invalid credentials. Please try again.');
