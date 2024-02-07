@@ -1,3 +1,4 @@
+// LoginPage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
@@ -21,7 +22,7 @@ const LoginPage = () => {
     const isAdmin = username === 'Admin' && password === 'admin123';
 
     if (user || isAdmin) {
-      navigate('/welcome');
+      navigate('/welcome', { state: { isAdmin } }); // Pass isAdmin parameter to the welcome page
     } else {
       setError('Invalid credentials. Please try again.');
     }
