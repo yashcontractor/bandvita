@@ -1,3 +1,4 @@
+// LoginPage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
@@ -11,16 +12,11 @@ const LoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Check if entered credentials match any user (excluding admin)
     const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
-    const user = storedUsers.find(
-      (u) => u.username === username && u.password === password && u.username !== 'Admin'
-    );
+    const user = storedUsers.find(u => u.username === username && u.password === password);
 
-    // Check if entered credentials match admin credentials
-    const isAdmin = username === 'Admin' && password === 'admin123';
-
-    if (user || isAdmin) {
+    if (user) {
+      localStorage.setItem('currentUser', user.username); // Store the username of the logged-in user
       navigate('/welcome');
     } else {
       setError('Invalid credentials. Please try again.');
@@ -32,28 +28,11 @@ const LoginPage = () => {
       <h1 className="main-title">BandVita</h1>
       <form onSubmit={handleLogin}>
         <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-
+        <input type="text" id="username" name="username" value={username} onChange={(e) => setUsername(e.target.value)} />
         <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
+        <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         {error && <p className="error-message">{error}</p>}
-
-        <button id="login_btn" type="submit">
-          Log In
-        </button>
+        <button id="login_btn" type="submit">Log In</button>
       </form>
     </div>
   );
