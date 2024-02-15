@@ -21,6 +21,11 @@ const SignupPage = () => {
     });
   };
 
+  const isValidEmail = email => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\.,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,})$/i;
+    return re.test(String(email).toLowerCase());
+  };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
@@ -31,7 +36,10 @@ const SignupPage = () => {
     }
 
     // Assuming you have some additional validation checks here before storing the data
-
+    if (!isValidEmail(formData.email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
     // Store the user data in local storage
     const users = JSON.parse(localStorage.getItem('users')) || [];
     users.push({
