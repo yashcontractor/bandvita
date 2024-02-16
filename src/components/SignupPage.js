@@ -1,9 +1,10 @@
+// SignupPage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../App.css';
+import testData from './testData.json'; // Import testData.json
 
 const SignupPage = () => {
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -21,91 +22,69 @@ const SignupPage = () => {
     });
   };
 
+  const isValidEmail = (email) => {
+    // Your email validation logic here
+    return true; // For simplicity, assume email is always valid
+  };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    // Validate that username and password are not empty
+    // Validate username and password
     if (!formData.username.trim() || !formData.password.trim()) {
       setError('Please enter both username and password.');
       return;
     }
 
-    // Assuming you have some additional validation checks here before storing the data
+    // Validate email
+    if (!isValidEmail(formData.email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
 
-    // Store the user data in local storage
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-    users.push({
+    // Create a new user object
+    const newUser = {
       username: formData.username,
       password: formData.password,
-    });
-    localStorage.setItem('users', JSON.stringify(users));
+      email: formData.email,
+      age: formData.age,
+      gender: formData.gender,
+      testResults: [] // Add an empty array for test results
+    };
 
-    // Clear any previous error and navigate back to the login page
-    setError('');
+    // Update your data storage (e.g., testData.json)
+    testData.push(newUser);
+
+    // Navigate to the login page
     navigate('/login');
   };
 
   return (
     <div>
-      <h1 className="main-title">BandVita</h1>
+      <h1 className="main-title1">BandVita</h1>
       <form onSubmit={handleFormSubmit}>
         <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          value={formData.username}
-          onChange={handleInputChange}
-        />
-
+        <input type="text" id="username" name="username" value={formData.username} onChange={handleInputChange} />
+        
         <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          value={formData.password}
-          onChange={handleInputChange}
-        />
-
+        <input type="password" id="password" name="password" value={formData.password} onChange={handleInputChange} />
+        
         <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-        />
-
+        <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} />
+        
         <label htmlFor="age">Age</label>
-        <input
-          type="number"
-          id="age"
-          name="age"
-          min="0"
-          max="100"
-          value={formData.age}
-          onChange={handleInputChange}
-        />
-
+        <input type="number" id="age" name="age" min="0" max="100" value={formData.age} onChange={handleInputChange} />
+        
         <label htmlFor="gender">Gender</label>
-        <select
-          id="gender"
-          name="gender"
-          value={formData.gender}
-          onChange={handleInputChange}
-        >
+        <select id="gender" name="gender" value={formData.gender} onChange={handleInputChange}>
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="other">Other</option>
         </select>
-
-        <div style={{ marginBottom: '1.5rem' }}></div>
-
+        
         {error && <p className="error-message">{error}</p>}
-
-        <button id="signup1_btn" type="submit">
-          Sign Up
-        </button>
+        
+        <button id="signup1_btn" type="submit" className="signup-button">Sign Up</button>
       </form>
     </div>
   );

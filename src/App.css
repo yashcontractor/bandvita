@@ -217,6 +217,98 @@ input[type='password']:focus {
 
 .welcome-title {
   font-size: 6rem; /* Increase font size */
-  color: rgb(252, 252, 252); /* White color for text */
+  color: rgb(0, 0, 0); /* White color for text */
   text-align: center; /* Center-align text */
 }
+
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background: #f1f1f1; /* Lighter background for the whole page */
+  color: #333; /* Dark text color for better readability */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top */
+}
+
+/* Top Navigation Bar */
+.top-nav {
+  width: 100%;
+  background: transparent; /* Make the top navigation bar blend with the background */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center; /* Center the navigation items */
+  align-items: center;
+}
+
+.logo {
+  font-size: 4rem; /* Increase the font size */
+  font-weight: bold;
+  color: #333; /* Dark color for logo text */
+  text-transform: uppercase; /* Capitalize the logo text */
+  margin-bottom: 2rem; /* Add some space below the logo */
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: #333; /* Dark color for title text */
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #555; /* Darker shade for subtitle */
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  color: #fff; /* White text color */
+  background-color: #007bff; /* Primary button color */
+  border-radius: 5px;
+  border: none; /* Remove border */
+  font-size: 1rem; /* Button text size */
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3; /* Darker blue on hover for the button */
+  color: #fff; /* Maintain white text color on hover */
+}
+
+/* About Section */
+.about-section {
+  padding: 2rem 1rem;
+  background: #e2e8f0; /* Light blue background for the about section */
+  color: #333; /* Dark color for text */
+  width: 100%;
+  border-top: 1px solid #ccc; /* Add a top border for visual separation */
+  border-bottom: 1px solid #ccc; /* Add a bottom border for visual separation */
+}
+
+/* Enhance overall layout */
+.home-container {
+  max-width: 1200px; /* Set a max width for the layout */
+  width: 100%;
+  margin: 0 auto; /* Center the container */
+}
+
+/* Add more sections as needed */
