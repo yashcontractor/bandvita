@@ -12,7 +12,7 @@ const fetchDataAndExport = async () => {
     // Initialize Cosmos DB client
     const cosmosClient = new CosmosClient({
       endpoint: 'https://capstonecosmosdb.documents.azure.com:443/',
-      key: '',
+      key: '', //insert key
     });
 
     // Connect to Cosmos DB
