@@ -2,13 +2,14 @@
 const { useEffect } = require('react');
 const fs = require('fs'); // Import the 'fs' module to work with files
 const path = require('path'); // Import the 'path' module to handle file paths
+import cosmosData from './cosmos_db_data.json';
 
 // Define your Azure.js module logic
 const fetchDataAndExport = async () => {
   try {
     // Import necessary modules
     const { CosmosClient } = require('@azure/cosmos');
-
+    
     // Initialize Cosmos DB client
     const cosmosClient = new CosmosClient({
       endpoint: 'https://capstonecosmosdb.documents.azure.com:443/',
@@ -17,7 +18,7 @@ const fetchDataAndExport = async () => {
 
     // Connect to Cosmos DB
     const database = cosmosClient.database('SampleDB');
-    const container = database.container('SampleContainer');
+    const container = database.container('SensorResults');
 
     // Query data from Cosmos DB
     const { resources: data } = await container.items.readAll().fetchAll();

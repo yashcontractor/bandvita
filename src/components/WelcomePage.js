@@ -97,11 +97,19 @@
 
 
 // WelcomePage.js
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css';
+import cosmosData from './cosmos_db_data.json'; // Importing the JSON data
 
 const WelcomePage = () => {
-  const currentUser = JSON.parse(localStorage.getItem('currentUser')); // Retrieve the logged-in user
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  const [data, setData] = useState([]); // Changed back to an array to store multiple entries
+
+  const handleScan = () => {
+    // Assuming cosmosData is now an array of objects
+    setData(cosmosData);
+    console.log("Data loaded:", cosmosData);
+  };
 
   return (
     <div className="welcome-container">
@@ -112,6 +120,24 @@ const WelcomePage = () => {
           <li key={index}>Test {index + 1}: {result}</li>
         ))}
       </ul>
+      <button className="scan-button" onClick={handleScan}>Scan</button>
+      <div>
+        <h2>Scanned Data:</h2>
+        {data.length > 0 ? (
+          data.map((entry, index) => (
+            <div key={index}>
+              <h3>Device {index + 1} Information:</h3>
+              <p><strong>Health:</strong> {entry.health}</p>
+              <p><strong>Device ID:</strong> {entry.deviceId}</p>
+              <p><strong>Temperature:</strong> {entry.Temperature}°C</p>
+              <p><strong>Humidity:</strong> {entry.Humidty}%</p>
+              <p><strong>Heat Index:</strong> {entry.HeatIndex}</p>
+            </div>
+          ))
+        ) : (
+          <p>No data to display.</p>
+        )}
+      </div>
     </div>
   );
 };
