@@ -1,0 +1,28 @@
+[{
+    "health": "MKR1010Active",
+    "deviceId": "MKR 1010",
+    "Temperature": 16,
+    "Humidty": 24,
+    "HeatIndex": 22.87310219,
+    "id": "9200e0b3-63ef-48a9-9ab3-5714ae1781a1",
+    "_rid": "M+9LAJx9SfABAAAAAAAAAA==",
+    "_self": "dbs/M+9LAA==/colls/M+9LAJx9SfA=/docs/M+9LAJx9SfABAAAAAAAAAA==/",
+    "_etag": "\"0200df73-0000-4d00-0000-662ad9c40000\"",
+    "_attachments": "attachments/",
+    "_ts": 1714084292
+},
+
+{
+    "health": "MKR1010Active",
+    "deviceId": "MKR 1010",
+    "Temperature": 17,
+    "Humidty": 25,
+    "HeatIndex": 23.89810219,
+    "id": "9200e0b3-63ef-48a9-9ab3-5714ae1781a1",
+    "_rid": "M+9LAJx9SfABAAAAAAAAAA==",
+    "_self": "dbs/M+9LAA==/colls/M+9LAJx9SfA=/docs/M+9LAJx9SfABAAAAAAAAAA==/",
+    "_etag": "\"0200df73-0000-4d00-0000-662ad9c40000\"",
+    "_attachments": "attachments/",
+    "_ts": 1714084292
+}
+]

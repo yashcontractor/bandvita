@@ -1,20 +1,370 @@
-/* src/App.css */
-.App {
+/*** Landing Page ***/
+.main-title {
+  padding-top: 0rem; /* Adjust the padding to move it up */
+  font-size: 6rem; /* Increase font size */
+  color: #f1f1f1;
+  font-size: 10rem;
+  font-family: 'Fascinate';
+  text-transform: uppercase;
+}
+
+.main-para {
+  color: #f1f1f1;
+}
+
+.home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #001f3f; /* Set dark blue background color */
-  color: #ffffff; /* Set text color to white */
-  font-size: 60px; /* Set the font size to 24px, you can adjust this value as needed */
+  background: #001f3f; /* Updated background color */
+}
+
+/* .main-title {
+  padding-top: 10rem;
+  font-size: 5rem;
+  font-family: 'Fascinate', cursive;
+  text-transform: uppercase;
+} */
+
+.main-para {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+#login_btn,
+#signup_btn {
+  display: block;
+  width: 100%;
+  padding: 1rem; /* Increase padding for larger buttons */
+  margin-bottom: 1.5rem; /* Increase margin for more spacing between buttons */
+  border: none;
+  background: #fff;
+  color: #222;
+  border-radius: 5px; /* Adjust border-radius for a rounded look */
+  text-align: center; /* Center-align button text */
+  font-size: 1.2rem; /* Increase font size */
+  position: relative; /* Added position relative */
+}
+
+#login_btn:hover,
+#signup_btn:hover {
+  background: #fff; /* Only changing the background color on hover */
+  transition: background .5s; /* Transition only the background color */
+}
+
+#login_btn span,
+#signup_btn span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#login_btn span:after,
+#signup_btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#login_btn:hover span,
+#signup_btn:hover span {
+  padding-right: 25px;
+}
+
+#login_btn:hover span:after,
+#signup_btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+/*** Login Page ***/
+
+.main-title {
+  padding-top: 6rem; /* Adjust the padding to move it up */
+  font-size: 6rem; /* Increase font size */
+  color: #f1f1f1;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #001f3f; /* Set background color for the entire body */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Other styles for the form */
+  background: #fff; /* Background color for the form */
+  padding: 2rem; /* Padding for the form container */
+  border-radius: 10px; /* Rounded corners for the form container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow */
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type='text'],
+input[type='password'] {
+  width: 15rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type='text']:focus,
+input[type='password']:focus {
+  border-color: #555;
+}
+
+#login_btn {
+  width: 15rem;
+  padding: 1rem;
+  border: none;
+  background: #007bff; /* Change color as needed */
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+#login_btn:hover {
+  background: #0056b3; /* Change color on hover */
+}
+
+
+/*** Sign Up Page ***/
+.main-title1 {
+  padding-top: 6rem; /* Adjust the padding to move it up */
+  font-size: 6rem; /* Increase font size */
+  color: #f1f1f1;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #001f3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type='text'],
+input[type='password'] {
+  width: 15rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type='text']:focus,
+input[type='password']:focus {
+  border-color: #555;
+}
+
+#signup1_btn {
+  width: 15rem;
+  padding: 1rem;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+#signup1_btn:hover {
+  background: #0056b3;
+}
+
+/* home page */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4; /* Change the background to match the central content's background */
+  height: 100%; /* Changed from 100vh to 100% for full height */
+  width: 100%; /* Ensure the width also takes up 100% */
+  display: block; /* Changed from flex to block layout */
+}
+
+.top-nav {
+  width: 100%;
+  background: #333;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  width: 100%;
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  color: white;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.cta-button {
+  padding: 0.75rem 2rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #0069d9;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.about-section {
+  padding: 3rem 2rem;
+  background: #fff;
+  color: #333;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Utilize media queries to handle responsiveness */
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 4rem;
+  }
+
+  .about-section {
+    padding: 4rem;
+  }
+
+  .top-nav {
+    padding: 1rem 4rem;
+  }
 }
 
 
 
+/* Add more sections as needed */
+.welcome-container {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  margin: 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid #eee;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.chart-container {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background: #f9f9f9;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Scale down each graph's size */
+  height: calc(40vh - 60px);
+}
+
+/* Apply the same size adjustments to all chart containers */
+.chart-container, .chart-container.metric {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background: #f9f9f9;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Reduced height for all graph containers */
+  height: calc(40vh - 60px);
+}
 
 
-.forms-container button {
-  font-size: 50px; /* Set the font size for buttons to 24px, adjust as needed */
-  margin-top: 10px; /* Add margin to separate the button from the form */
+
+/* Adjust the width of the chart containers for better spacing */
+.chart-container.overview {
+  grid-column: 1 / span 2; /* The overview chart spans both columns */
+  height: auto; /* Let the overview chart size adjust to content */
+}
+
+.metric {
+  height: calc(50vh - 40px); /* Adjust height to use 50% of the viewport height minus the gap */
 }
