@@ -1,6 +1,6 @@
 # Smart Health Band for Medical Researchers
-
-## Executive Summary
+![Project Image](image.jpeg)
+## Project Overview
 
 The objective of our project is to instigate the development of a smart health band tailored specifically for researchers in the medical field. This innovative health band is engineered to collect data on various health parameters, seamlessly integrated to a web application designed for streamlined data visualization and analysis. This will be geared towards the use of medical researchers since our goal is to incorporate mass data into easy to read and visualise formats. With the use of our device researchers will be able to conduct large scale studies in a simple and time efficient manner, saving valuable time and resources that can be spent on furthering medical research.
 
@@ -40,23 +40,4 @@ Displays a personalized welcome message and a list of the user’s test results.
 
 Interfaces with Azure Cosmos DB to fetch and store data. Features include asynchronous functions, error handling, and file operations. Proper use of modern JavaScript features like async/await for asynchronous database interactions. Includes error handling which is crucial for debugging and ensuring application stability.
 
-## Project Overview
 
-Our capstone project is dedicated to developing a revolutionary smart health band tailored for medical researchers. The objective is to streamline data collection, visualization, and analysis through a user-friendly web application.
-
-## Key Features
-
-- **Sensors:** Heart rate, blood oxygen, and accelerometer for comprehensive health data.
-- **Web Application:** User authentication, sign-up, and a dashboard for intuitive data analysis.
-- **IoT Integration:** Telus LTE-M IoT board for robust data transfer.
-- **Prototype Design:** Utilizing Arduino for sensor testing and troubleshooting.
-
-## Repository Contents
-
-This repository serves as a comprehensive resource for:
-
-- Project documentation
-- Codebase
-- Updates on our journey
-
-![Project Image](image.jpeg)
