@@ -1,0 +1,23 @@
+[
+    {
+      "username": "user1",
+      "password": "123",
+      "testResults": [85, 90, 92]
+    },
+    {
+      "username": "user2",
+      "password": "456",
+      "testResults": [78, 85, 88]
+    },
+    {
+      "username": "user3",
+      "password": "789",
+      "testResults": [92, 88, 95]
+    },
+    {
+      "username": "user4",
+      "password": "abc",
+      "testResults": [70, 75, 80]
+    }
+  ]
+  

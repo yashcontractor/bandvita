@@ -1,18 +1,24 @@
 import React from 'react';
-import Title from './components/Title';
-import SignupForm from './components/SignupForm';
-import LoginForm from './components/LoginForm';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import SignupPage from './components/SignupPage';
+import LoginPage from './components/LoginPage';
+import WelcomePage from './components/WelcomePage';
 import './App.css';
+
 
 const App = () => {
   return (
-    <div className="App">
-      <Title />
-      <div className="forms-container">
-        <SignupForm />
-        <LoginForm />
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/welcome" element={<WelcomePage />} />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 };
 
