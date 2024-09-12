@@ -61,7 +61,7 @@ const SignupPage = () => {
 
   return (
     <div>
-      <h1 className="main-title1">BandVita</h1>
+      <h1 className="main-title1">BANDVITA</h1>
       <form onSubmit={handleFormSubmit}>
         <label htmlFor="username">Username</label>
         <input type="text" id="username" name="username" value={formData.username} onChange={handleInputChange} />

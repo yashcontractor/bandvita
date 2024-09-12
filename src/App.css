@@ -85,6 +85,14 @@
 
 /*** Login Page ***/
 
+.main-title {
+  padding-top: 6rem; /* Adjust the padding to move it up */
+  font-size: 6rem; /* Increase font size */
+  color: #f1f1f1;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -149,6 +157,7 @@ input[type='password']:focus {
   padding-top: 6rem; /* Adjust the padding to move it up */
   font-size: 6rem; /* Increase font size */
   color: #f1f1f1;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
@@ -208,107 +217,154 @@ input[type='password']:focus {
   background: #0056b3;
 }
 
-
-/*** Home Page ***/
-.home-page-title {
-  color: #fff;
-}
-
-
-.welcome-title {
-  font-size: 6rem; /* Increase font size */
-  color: rgb(0, 0, 0); /* White color for text */
-  text-align: center; /* Center-align text */
-}
-
-
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* home page */
 
 body, html {
-  height: 100%;
-  font-family: 'Arial', sans-serif;
-  background: #f1f1f1; /* Lighter background for the whole page */
-  color: #333; /* Dark text color for better readability */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Align content to the top */
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4; /* Change the background to match the central content's background */
+  height: 100%; /* Changed from 100vh to 100% for full height */
+  width: 100%; /* Ensure the width also takes up 100% */
+  display: block; /* Changed from flex to block layout */
 }
 
-/* Top Navigation Bar */
 .top-nav {
   width: 100%;
-  background: transparent; /* Make the top navigation bar blend with the background */
+  background: #333;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: center; /* Center the navigation items */
+  justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .logo {
-  font-size: 4rem; /* Increase the font size */
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #333; /* Dark color for logo text */
-  text-transform: uppercase; /* Capitalize the logo text */
-  margin-bottom: 2rem; /* Add some space below the logo */
+  color: #fff;
 }
 
-/* Hero Section */
 .hero-section {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
   width: 100%;
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  color: white;
 }
 
 .hero-title {
   font-size: 3rem;
-  color: #333; /* Dark color for title text */
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: #555; /* Darker shade for subtitle */
   margin-bottom: 2rem;
+  font-weight: 300;
 }
 
 .cta-button {
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 2rem;
   margin: 0.5rem;
   text-decoration: none;
-  color: #fff; /* White text color */
-  background-color: #007bff; /* Primary button color */
+  color: #fff;
+  background-color: #0069d9;
   border-radius: 5px;
-  border: none; /* Remove border */
-  font-size: 1rem; /* Button text size */
-  transition: background-color 0.3s ease;
+  border: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .cta-button:hover {
-  background-color: #0056b3; /* Darker blue on hover for the button */
-  color: #fff; /* Maintain white text color on hover */
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* About Section */
 .about-section {
-  padding: 2rem 1rem;
-  background: #e2e8f0; /* Light blue background for the about section */
-  color: #333; /* Dark color for text */
+  padding: 3rem 2rem;
+  background: #fff;
+  color: #333;
   width: 100%;
-  border-top: 1px solid #ccc; /* Add a top border for visual separation */
-  border-bottom: 1px solid #ccc; /* Add a bottom border for visual separation */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Enhance overall layout */
-.home-container {
-  max-width: 1200px; /* Set a max width for the layout */
-  width: 100%;
-  margin: 0 auto; /* Center the container */
+/* Utilize media queries to handle responsiveness */
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 4rem;
+  }
+
+  .about-section {
+    padding: 4rem;
+  }
+
+  .top-nav {
+    padding: 1rem 4rem;
+  }
 }
+
+
 
 /* Add more sections as needed */
+.welcome-container {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  margin: 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid #eee;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.chart-container {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background: #f9f9f9;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Scale down each graph's size */
+  height: calc(40vh - 60px);
+}
+
+/* Apply the same size adjustments to all chart containers */
+.chart-container, .chart-container.metric {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background: #f9f9f9;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Reduced height for all graph containers */
+  height: calc(40vh - 60px);
+}
+
+
+
+/* Adjust the width of the chart containers for better spacing */
+.chart-container.overview {
+  grid-column: 1 / span 2; /* The overview chart spans both columns */
+  height: auto; /* Let the overview chart size adjust to content */
+}
+
+.metric {
+  height: calc(50vh - 40px); /* Adjust height to use 50% of the viewport height minus the gap */
+}
